@@ -133,11 +133,6 @@
 </script>
 
 <style>
-  section
-  {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-
   .container
   {
     min-height: 70vh;
@@ -200,7 +195,6 @@
   {
     text-align: center;
     margin-top: -25vh;
-    background-color: white;
   }
 
   #screenshot img
