@@ -23,7 +23,11 @@
       return {
         items: [
           {to: '#title', title: 'Home', index: 'Home'},
-          {to: '#features', title: 'Features', index: 'Features'}
+          {to: '#features', title: 'Features', index: 'Features'},
+          {to: '', title: 'About', index: 'About'},
+          {to: '', title: 'Download', index: 'Download'},
+          {to: '', title: 'Contribute', index: 'Contribute'},
+          {to: '', title: 'Contact', index: 'Contact'}
         ],
         activeIndex: 'Home'
       }
@@ -59,5 +63,6 @@
   {
     /*position: fixed;*/
     width: 100%;
+    padding-left: 15%;
   }
 </style>

@@ -19,17 +19,3 @@ a, a:hover, a:focus, a:visited
 {
   color: #41B883;
 }
-
-.logo {
-  width: 243px;
-  height: 218px;
-}
-
-.page-enter-active, .page-leave-active
-{
-  transition: opacity .5s
-}
-.page-enter, .page-leave-active
-{
-  opacity: 0
-}
