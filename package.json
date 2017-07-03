@@ -3,18 +3,19 @@
   "version": "1.0.0",
   "description": "KawAnime's official website.",
   "author": "Kylart",
-  "dependencies": {
-    "element-ui": "^1.3.7",
-    "nuxt": "latest",
-    "vue-scrollto": "^2.7.0"
-  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "bstart": "nuxt build && nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "element-ui": "^1.3.7",
+    "nuxt": "latest",
+    "vue-scrollto": "^2.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

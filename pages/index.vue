@@ -169,6 +169,7 @@
   #features
   {
     margin-top: 8vh;
+    padding-top: 5vh;
   }
 
   #features .subtitle
