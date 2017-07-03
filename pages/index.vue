@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section  id="title" class="container">
+    <section id="title" class="container">
       <div>
         <h1 class="title">
           KawAnime
@@ -18,10 +18,10 @@
       <p class="details">Also, it can be a bit risky.</p>
     </section>
     <section id="features">
-      <h1 class="subtitle">KawAnime offers many things.</h1>
+      <h1 class="subtitle">KawAnime does many things.</h1>
       <el-row class="features-container">
         <template v-for="(item, i) in features">
-          <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+          <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="feature-container">
             <el-row>
               <template v-if="i % 2 === 0">
                 <el-col :xs="14" :sm="14" :md="14" :lg="14" :xl="14" class="feature">
@@ -46,6 +46,40 @@
         </template>
       </el-row>
     </section>
+    <section id="about">
+      <h1 class="subtitle">What is KawAnime?</h1>
+      <div class="top">
+        <h5 class="text">
+          KawAnime is a side-project I started in the end of 2016. It is a desktop app which purpose was for me to
+          be able to download easily
+          tons of anime as much as being able to download one of the latest releases with just a click.
+        </h5>
+        <h5 class="text">
+          I have a obsession of being able to do everything within the same window. So, with time, KawAnime ended up doing
+          lots of things.
+        </h5>
+      </div>
+      <div class="bottom" id="download">
+        <h5 class="text">
+          KawAnime allows anyone to access a lot of data concerning the anime world.
+        </h5>
+        <h5 class="text">
+          Download and watch animes easily. Manage your watch lists and research anime on the go. Easy!
+        </h5>
+        <h5 class="text">
+          KawAnime offers lots of features. Yet the best way to make your opinion of its usefulness would be to do
+          the same thing you surely do for your animes.
+        </h5>
+        <h5 class="text try-it">Try it out, it is free!</h5>
+        <h5 class="text">Not even a account registration thing to do!</h5>
+      </div>
+      <div class="text download">
+        <el-button class="download-btn" type="primary">Download</el-button>
+      </div>
+    </section>
+    <section id="contribute">
+
+    </section>
   </div>
 </template>
 
@@ -62,13 +96,13 @@
           }, {
             title: 'Download any anime simply.',
             description:
-              'KawAnime allows anyone to download any anime as easy as it should be. No more looking for batch torrents.',
+              'KawAnime allows anyone to download any anime (via torrent) as easy as it should be. No more looking for batch torrents.',
             image: ''
           }, {
             title: 'Manage your watch lists',
             description:
-              'Anyone can manage local watch lists easily in KawAnime. Soon enough, ' +
-              'it will even be possible to link those to you MyAnimeList account',
+            'Anyone can manage local watch lists easily in KawAnime. Soon enough, ' +
+            'it will even be possible to link those to you MyAnimeList account',
             image: ''
           }, {
             title: 'Follow the anime world.',
@@ -82,9 +116,14 @@
           }, {
             title: 'Start watching your anime directly from KawAnime',
             description:
-              'No need to open yet another software to start watching your animes. ' +
-              'You can start (and even delete) your anime files from within KawAnime. ' +
-              'This alongside a nice overview of the anime you are interested in watching!',
+            'No need to open yet another software to start watching your animes. ' +
+            'You can start (and even delete) your anime files from within KawAnime. It will in your preferred app. ' +
+            'This alongside a nice overview of the anime you are interested in watching!',
+            image: ''
+          }, {
+            title: 'Don\'t forget what you watched.',
+            description:
+              'KawAnime stores your watching history. Of course, you can delete entries on the go if you need to. ( ͡° ͜ʖ ͡°)',
             image: ''
           }
         ]
@@ -94,6 +133,11 @@
 </script>
 
 <style>
+  section
+  {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
   .container
   {
     min-height: 70vh;
@@ -156,6 +200,7 @@
   {
     text-align: center;
     margin-top: -25vh;
+    background-color: white;
   }
 
   #screenshot img
@@ -190,6 +235,11 @@
     padding: 50px;
   }
 
+  .feature-container
+  {
+    margin-top: 3vh;
+  }
+
   .feature-title
   {
     font-weight: 200;
@@ -214,5 +264,69 @@
   .feature-img
   {
     max-width: 95%;
+  }
+
+  #about
+  {
+    padding-top: 30px;
+    height: 70vh;
+  }
+
+  #about .subtitle
+  {
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
+
+  #about .top
+  {
+    width: 70%;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  #about .text
+  {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 35px;
+    color: #526488;
+    word-spacing: 2px;
+  }
+
+  #about .bottom
+  {
+    text-align: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    margin: 30px 25vh 0;
+    padding-top: 5px;
+  }
+
+  #about .try-it
+  {
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  #about .download
+  {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  #about .download-btn
+  {
+    display: inline-block;
+    width: 40vh;
+    height: 7vh;
+    font-size: 25px;
+  }
+
+  #contribute
+  {
+    height: 10000px;
   }
 </style>

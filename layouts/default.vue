@@ -24,10 +24,10 @@
         items: [
           {to: '#title', title: 'Home', index: 'Home'},
           {to: '#features', title: 'Features', index: 'Features'},
-          {to: '', title: 'About', index: 'About'},
-          {to: '', title: 'Download', index: 'Download'},
-          {to: '', title: 'Contribute', index: 'Contribute'},
-          {to: '', title: 'Contact', index: 'Contact'}
+          {to: '#about', title: 'About', index: 'About'},
+          {to: '#download', title: 'Download', index: 'Download'},
+          {to: '#contribute', title: 'Contribute', index: 'Contribute'},
+          {to: '#contact', title: 'Contact', index: 'Contact'}
         ],
         activeIndex: 'Home'
       }
@@ -61,7 +61,6 @@
 
   #menu
   {
-    /*position: fixed;*/
     width: 100%;
     padding-left: 15%;
   }
