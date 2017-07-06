@@ -1,33 +1,19 @@
 <template>
   <section id="about">
     <h1 class="subtitle">What is KawAnime?</h1>
-    <div class="top">
+    <div class="container">
       <h5 class="text">
-        KawAnime is a side-project I started in the end of 2016. It is a desktop app which purpose was for me to
-        be able to download easily
+        KawAnime is a desktop app with the purpose of having anyone able to easily download
         tons of anime as much as being able to download one of the latest releases with just a click.
       </h5>
       <h5 class="text">
-        I have a obsession of being able to do everything within the same window. So, with time, KawAnime ended up doing
-        lots of things.
-      </h5>
-    </div>
-    <div class="bottom" id="download">
-      <h5 class="text">
-        KawAnime allows anyone to access a lot of data concerning the anime world.
-      </h5>
-      <h5 class="text">
-        Download and watch animes easily. Manage your watch lists and research anime on the go. Easy!
-      </h5>
-      <h5 class="text">
-        KawAnime offers lots of features. Yet the best way to make your opinion of its usefulness would be to do
-        the same thing you surely do for your animes.
+        KawAnime offers many features to follow the anime world. It was made by anime fans and designed for them.
       </h5>
       <h5 class="text try-it">Try it out, it is free!</h5>
-      <h5 class="text">Not even a account registration thing to do!</h5>
     </div>
+
     <div class="text download">
-      <el-button class="download-btn" type="primary">Download</el-button>
+      <el-button class="download-btn">Download</el-button>
     </div>
   </section>
 </template>
@@ -49,7 +35,7 @@
     word-spacing: 3px;
   }
 
-  .top
+  .container
   {
     width: 70%;
     margin: auto;
@@ -64,14 +50,6 @@
     line-height: 35px;
     color: #526488;
     word-spacing: 2px;
-  }
-
-  .bottom
-  {
-    text-align: center;
-    border-top: 2px solid rgba(0, 0, 0, 0.2);
-    margin: 30px 25vh 0;
-    padding-top: 5px;
   }
 
   .try-it
@@ -92,6 +70,7 @@
     display: inline-block;
     width: 40vh;
     height: 7vh;
-    font-size: 25px;
+    font-size: 80%;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 </style>

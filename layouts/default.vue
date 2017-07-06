@@ -7,7 +7,7 @@
              @select="handleSelect">
       <template v-for="item in items">
         <el-menu-item :index="item.index"
-                      v-scroll-to="{ element: item.to, duration: 1500, easing: [.6, .80, .30, 1.9] }">
+                      v-scroll-to="{ element: item.to, duration: 1500, easing: [.6, .80, .30, 1.2] }">
           {{ item.title }}
         </el-menu-item>
       </template>

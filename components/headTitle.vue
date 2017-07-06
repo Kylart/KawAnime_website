@@ -15,7 +15,7 @@
   #title
   {
     position: relative;
-    background-image: url('~static/images/title_bg.png');
+    background-image: url('~static/images/title_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 15vh;
@@ -37,7 +37,7 @@
     font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
     display: block;
     font-weight: 200;
-    font-size: 100px;
+    font-size: 12vh;
     color: #35495e;
     letter-spacing: 3px;
   }

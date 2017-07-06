@@ -21,7 +21,6 @@
 <style scoped>
   #contribute
   {
-    height: 10000px;
     text-align: center;
   }
 

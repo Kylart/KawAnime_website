@@ -11,22 +11,22 @@
                 <p class="desc">{{ item.description }}</p>
               </el-col>
               <el-col :xs="0" :sm="0" :md="11" :lg="11" :xl="11" class="pic">
-                <img src="https://i.ytimg.com/vi/NmLwkh8EEUY/maxresdefault.jpg" class="img-large"/>
+                <img :src="item.pic" class="img-large"/>
               </el-col>
               <el-col :xs="24" :sm="24" :md="0" :lg="0" :xl="0" class="pic">
-                <img src="https://i.ytimg.com/vi/NmLwkh8EEUY/maxresdefault.jpg" class="img-small"/>
+                <img :src="item.pic" class="img-small"/>
               </el-col>
             </template>
             <template v-else>
               <el-col :xs="0" :sm="0" :md="11" :lg="11" :xl="11" class="pic">
-                <img src="https://i.ytimg.com/vi/NmLwkh8EEUY/maxresdefault.jpg" class="img-large"/>
+                <img :src="item.pic" class="img-large"/>
               </el-col>
               <el-col :xs="24" :sm="24" :md="13" :lg="13" :xl="13" class="feature">
                 <h2 class="feature-title">{{ item.title }}</h2>
                 <p class="desc">{{ item.description }}</p>
               </el-col>
               <el-col :xs="24" :sm="24" :md="0" :lg="0" :xl="0" class="pic">
-                <img src="https://i.ytimg.com/vi/NmLwkh8EEUY/maxresdefault.jpg" class="img-small"/>
+                <img :src="item.pic" class="img-small"/>
               </el-col>
             </template>
           </el-row>
@@ -40,6 +40,7 @@
   #features
   {
     margin-top: 8vh;
+    margin-bottom: 6vh;
     padding-top: 5vh;
   }
 
@@ -80,14 +81,18 @@
 
   .desc
   {
-    width: 70%;
+    max-width: 90%;
     font-weight: 100;
     font-size: 17px;
     color: #526488;
-    margin: auto;
-    margin-top: 20px;
+    margin: 20px auto auto;
     line-height: 28px;
     word-spacing: 2px;
+    text-align: justify;
+    text-align-last: center;
+    -moz-text-align-last: center;
+    -ms-text-align-last: center;
+    white-space: pre-wrap;
   }
 
   .pic
@@ -103,7 +108,7 @@
   .img-small
   {
     padding-top: 20px;
-    max-width: 60%;
+    max-width: 88%;
   }
 </style>
 
@@ -111,44 +116,43 @@
   export default {
     data () {
       return {
+        image: '/images/Hestia.gif',
         features: [
           {
-            title: 'Be aware the latest releases.',
+            title: 'Be aware of the latest releases',
             description:
-              'KawAnime lets you know the latest releases according to your preferred fansubs, directly from nyaa.',
-            image: ''
+              'KawAnime lets you know the latest releases according to your preferred fansubs, ' +
+              'and lets you download them with just a click.',
+            pic: '/images/releases.gif'
           }, {
-            title: 'Download any anime simply.',
+            title: 'Download any anime simply',
             description:
-              'KawAnime allows anyone to download any anime (via torrent) as easy as it should be. No more looking for batch torrents.',
-            image: ''
+              'KawAnime allows anyone to download any anime (via torrent) as easy as it should be. ' +
+              'No more looking for batch torrents.',
+            pic: '/images/downloader.gif'
           }, {
             title: 'Manage your watch lists',
             description:
             'Anyone can manage local watch lists easily in KawAnime. Soon enough, ' +
-            'it will even be possible to link those to you MyAnimeList account',
-            image: ''
+            'it will even be possible to link those to your MyAnimeList account',
+            pic: '/images/Hestia.gif'
           }, {
-            title: 'Follow the anime world.',
-            description: 'Don\'t ever be unaware of a news in the anime world!',
-            image: ''
-          }, {
-            title: 'Follow the anime season.',
+            title: 'Follow the anime season',
             description:
-              'KawAnime offers a feature to follow the anime season simply, even adding anime to your watch lists on the go is easy!',
-            image: ''
+              'KawAnime offers a feature to follow the anime seasons simply, even adding anime to your watch lists on the go is easy!',
+            pic: '/images/Hestia.gif'
           }, {
             title: 'Start watching your anime directly from KawAnime',
             description:
             'No need to open yet another software to start watching your animes. ' +
-            'You can start (and even delete) your anime files from within KawAnime. It will in your preferred app. ' +
+            'You can start (and even delete) your anime files from within KawAnime. It will open in your preferred app. ' +
             'This alongside a nice overview of the anime you are interested in watching!',
-            image: ''
+            pic: '/images/local.gif'
           }, {
-            title: 'Don\'t forget what you watched.',
+            title: 'Don\'t forget what you watched',
             description:
-              'KawAnime stores your watching history. Of course, you can delete entries on the go if you need to. ( ͡° ͜ʖ ͡°)',
-            image: ''
+              'KawAnime stores your watching history. Of course, you can delete entries on the go if you need to. \n ( ͡° ͜ʖ ͡°)',
+            pic: '/images/Hestia.gif'
           }
         ]
       }
