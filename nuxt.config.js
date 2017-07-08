@@ -1,3 +1,5 @@
+const {join} = require('path')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -34,10 +36,13 @@ module.exports = {
         })
       }
     },
-    vendor: ['element-ui', 'vue-scrollto']
+    vendor: ['vuetify', 'vue-scrollto']
   },
   plugins: [
-    '~plugins/element.js',
+    '~plugins/vuetify.js',
     '~plugins/vue-scroll-to.js'
+  ],
+  css: [
+    {src: join(__dirname, 'assets/css/app.styl'), lang: 'styl'}
   ]
 }

@@ -1,0 +1,48 @@
+@require './vendor/vuetify.styl'
+
+// General
+html, body
+  background-color: #fff
+  color: #2e2f30
+  letter-spacing: 0.5px
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  height: 100vh
+  margin: 0
+
+a, a:hover, a:focus, a:visited
+  color: #41B883
+
+.container
+  padding: 0
+
+// Transitions
+.page-enter-active, .page-leave-active
+  transition: all 1s
+
+.page-enter
+  opacity: 0
+  transform: translateX(30px)
+
+.page-leave-active
+  opacity: 0
+  transform: translateY(30px)
+
+.list-enter-active
+  transition: all 1s
+
+.list-enter
+  opacity: 0
+  transform: translateX(30px)
+  transition transform 1s
+
+.list-leave-to
+  opacity: 0
+  transform: translateY(30px)
+  transition transform 1s
+
+.list-move
+  transition: transform 1s
+
+.list-leave-active
+  transition: all 1s
+  position: absolute

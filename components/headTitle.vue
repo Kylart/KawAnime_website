@@ -1,38 +1,42 @@
 <template>
-  <section id="title" class="container">
-    <div>
-      <h1 class="title">
-        KawAnime
-      </h1>
-      <h2 class="subtitle">
-        The ultimate otaku software
-      </h2>
+    <div id="title">
+      <div>
+        <div class="bg">
+          <div>
+            <h1 class="kawanime">
+              KawAnime
+            </h1>
+            <h2 class="subtitle">
+              The ultimate otaku software
+            </h2>
+          </div>
+        </div>
+        <div id="screenshot">
+          <img src="~static/images/screenshot.png">
+          <h4 class="description">
+            KawAnime is a software designed <strong>by</strong> otakus <strong>for</strong> the otaku community.
+          </h4>
+          <p class="details">Also, it can be a bit risky.</p>
+        </div>
+      </div>
     </div>
-  </section>
 </template>
 
 <style scoped>
-  #title
+  .bg
   {
-    position: relative;
-    background-image: url('~static/images/title_bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 15vh;
-    z-index: -5;
-  }
-
-  .container
-  {
-    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
+    width: 100%;
+    background-image: url('~static/images/title_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
   }
 
-  .title
+  .kawanime
   {
     font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
     display: block;
@@ -49,5 +53,38 @@
     color: #526488;
     word-spacing: 5px;
     padding-bottom: 15px;
+  }
+
+  #screenshot
+  {
+    text-align: center;
+    margin-top: -25vh;
+  }
+
+  .description
+  {
+    font-weight: 200;
+    font-size: 30px;
+    color: #526488;
+    word-spacing: 3px;
+  }
+
+  .details
+  {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #526488;
+    text-align: right;
+    padding-right: 10%;
+    font-style: italic;
+  }
+
+  img
+  {
+    height: 50%;
+    width: 90%;
+    z-index: 5;
+    margin-bottom: -2%;
   }
 </style>

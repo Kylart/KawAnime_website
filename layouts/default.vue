@@ -1,46 +1,42 @@
 <template>
-  <div>
-    <el-menu theme="dark"
-             :default-active="activeIndex"
-             id="menu"
-             mode="horizontal"
-             @select="handleSelect">
-      <template v-for="item in items">
-        <el-menu-item :index="item.index"
-                      v-scroll-to="{ element: item.to, duration: 1500, easing: [.6, .80, .30, 1.2] }">
-          {{ item.title }}
-        </el-menu-item>
-      </template>
-    </el-menu>
-    <nuxt></nuxt>
-    <footer-custom></footer-custom>
-  </div>
+  <v-app>
+    <v-toolbar fixed class="primary">
+      <v-spacer class="hidden-xs-only"></v-spacer>
+      <v-toolbar-side-icon class="hidden-sm-and-up"></v-toolbar-side-icon>
+      <v-toolbar-items class="hidden-xs-only">
+        <template v-for="item in items">
+          <v-btn flat
+                 class="white--text"
+                 v-scroll-to="{ element: item.to, duration: 1500, easing: [.6, .80, .30, 1.2] }">
+            {{ item.title }}
+          </v-btn>
+        </template>
+      </v-toolbar-items>
+      <v-spacer></v-spacer>
+    </v-toolbar>
+    <main style="padding-top: 48px">
+      <nuxt></nuxt>
+    </main>
+    <v-footer class="grey darken-4">
+      <v-spacer></v-spacer>
+      <div class="footer-text">© 2016 - {{ (new Date()).getYear() + 1900 }} Kylart</div>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-  import FooterCustom from '~components/footer.vue'
-
   export default {
     data () {
       return {
         items: [
-          {to: '#title', title: 'Home', index: 'Home'},
-          {to: '#features', title: 'Features', index: 'Features'},
-          {to: '#about', title: 'About', index: 'About'},
-          {to: '#download', title: 'Download', index: 'Download'},
-          {to: '#contribute', title: 'Contribute', index: 'Contribute'},
-          {to: '#contact', title: 'Contact', index: 'Contact'}
-        ],
-        activeIndex: 'Home'
+          {to: '#title', title: 'Home'},
+          {to: '#features', title: 'Features'},
+          {to: '#about', title: 'About'},
+          {to: '#download', title: 'Download'},
+          {to: '#contribute', title: 'Contribute'},
+          {to: '#contact', title: 'Contact'}
+        ]
       }
-    },
-    methods: {
-      handleSelect (key, keyPath) {
-        console.log(key, keyPath)
-      }
-    },
-    components: {
-      FooterCustom
     }
   }
 </script>
@@ -64,9 +60,8 @@
     margin: 0;
   }
 
-  #menu
+  .footer-text
   {
-    width: 100%;
-    padding-left: 15%;
+    color: white;
   }
 </style>

@@ -4,17 +4,17 @@
     <div class="description">
       There are several ways to help this project.
     </div>
-    <el-row>
-      <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="description">
+    <v-layout row wrap>
+      <v-flex xs6 class="description">
         Help us develop KawAnime
-      </el-col>
-      <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="description">
+      </v-flex>
+      <v-flex xs6 class="description">
         Donate
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24"  class="description">
+      </v-flex>
+      <v-flex xs12  class="description">
         Report bugs or propose features
-      </el-col>
-    </el-row>
+      </v-flex>
+    </v-layout>
   </section>
 </template>
 

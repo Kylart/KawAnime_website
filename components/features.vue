@@ -1,38 +1,38 @@
 <template>
   <section id="features">
-    <h1 class="title">KawAnime does many things.</h1>
-    <el-row class="features-container">
+    <h1 class="title-head">KawAnime does many things.</h1>
+    <v-layout row wrap class="features-container">
       <template v-for="(item, i) in features">
-        <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="feature-container">
-          <el-row>
+        <v-flex xs12 class="feature-container">
+          <v-layout row wrap>
             <template v-if="i % 2 === 0">
-              <el-col :xs="24" :sm="24" :md="13" :lg="13" :xl="13" class="feature">
+              <v-flex xs12 md6 class="feature">
                 <h2 class="feature-title">{{ item.title }}</h2>
                 <p class="desc">{{ item.description }}</p>
-              </el-col>
-              <el-col :xs="0" :sm="0" :md="11" :lg="11" :xl="11" class="pic">
+              </v-flex>
+              <v-flex hidden-sm-and-down md6 class="pic">
                 <img :src="item.pic" class="img-large"/>
-              </el-col>
-              <el-col :xs="24" :sm="24" :md="0" :lg="0" :xl="0" class="pic">
+              </v-flex>
+              <v-flex xs12 hidden-md-and-up class="pic">
                 <img :src="item.pic" class="img-small"/>
-              </el-col>
+              </v-flex>
             </template>
             <template v-else>
-              <el-col :xs="0" :sm="0" :md="11" :lg="11" :xl="11" class="pic">
+              <v-flex hidden-sm-and-down md6 class="pic">
                 <img :src="item.pic" class="img-large"/>
-              </el-col>
-              <el-col :xs="24" :sm="24" :md="13" :lg="13" :xl="13" class="feature">
+              </v-flex>
+              <v-flex xs12 md6 class="feature">
                 <h2 class="feature-title">{{ item.title }}</h2>
                 <p class="desc">{{ item.description }}</p>
-              </el-col>
-              <el-col :xs="24" :sm="24" :md="0" :lg="0" :xl="0" class="pic">
+              </v-flex>
+              <v-flex xs12 hidden-md-and-up class="pic">
                 <img :src="item.pic" class="img-small"/>
-              </el-col>
+              </v-flex>
             </template>
-          </el-row>
-        </el-col>
+          </v-layout>
+        </v-flex>
       </template>
-    </el-row>
+    </v-layout>
   </section>
 </template>
 
@@ -44,7 +44,7 @@
     padding-top: 5vh;
   }
 
-  .title
+  .title-head
   {
     text-align: center;
     letter-spacing: 2px;
