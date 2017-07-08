@@ -7,13 +7,10 @@
         tons of anime as much as being able to download one of the latest releases with just a click.
       </h5>
       <h5 class="text">
-        KawAnime offers many features to follow the anime world. It was made by anime fans and designed for them.
+        KawAnime offers many other features to follow the anime world. It was made by anime fans and designed for them.
       </h5>
       <h5 class="text try-it">Try it out, it is free!</h5>
-    </div>
-
-    <div class="text download">
-      <el-button class="download-btn">Download</el-button>
+      <h5 class="details">I mean... It's not like I <strong>want</strong> you to download it or anything</h5>
     </div>
   </section>
 </template>
@@ -22,7 +19,7 @@
   #about
   {
     padding-top: 30px;
-    height: 100vh;
+    height: 50vh;
   }
 
   .subtitle
@@ -50,12 +47,22 @@
     line-height: 35px;
     color: #526488;
     word-spacing: 2px;
+    margin-top: 3vh;
   }
 
   .try-it
   {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .details
+  {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #526488;
     font-style: italic;
   }
 

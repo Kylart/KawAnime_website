@@ -12,12 +12,14 @@
         </el-menu-item>
       </template>
     </el-menu>
-
     <nuxt></nuxt>
+    <footer-custom></footer-custom>
   </div>
 </template>
 
 <script>
+  import FooterCustom from '~components/footer.vue'
+
   export default {
     data () {
       return {
@@ -36,6 +38,9 @@
       handleSelect (key, keyPath) {
         console.log(key, keyPath)
       }
+    },
+    components: {
+      FooterCustom
     }
   }
 </script>

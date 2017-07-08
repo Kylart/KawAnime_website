@@ -6,7 +6,7 @@
     </div>
     <el-row>
       <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="description">
-        Help us developping KawAnime
+        Help us develop KawAnime
       </el-col>
       <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" class="description">
         Donate
@@ -21,6 +21,7 @@
 <style scoped>
   #contribute
   {
+    height: 100vh;
     text-align: center;
   }
 
@@ -32,6 +33,7 @@
     font-size: 40px;
     color: #526488;
     word-spacing: 3px;
+    margin-bottom: 5vh;
   }
 
   .description

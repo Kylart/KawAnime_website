@@ -1,11 +1,14 @@
 <template>
   <section id="download">
-    <h1></h1>
+
   </section>
 </template>
 
 <style scoped>
-
+  #download
+  {
+    height: 50vh;
+  }
 </style>
 
 <script>
