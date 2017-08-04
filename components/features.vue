@@ -116,43 +116,43 @@
   export default {
     data () {
       return {
-        image: '/images/Hestia.gif',
+        image: 'static/images/Hestia.gif',
         features: [
           {
             title: 'Be aware of the latest releases',
             description:
               'KawAnime lets you know the latest releases according to your preferred fansubs, ' +
-              'and lets you download them with just a click.',
-            pic: '/images/releases.gif'
+              'and lets you download them easily with just a click.',
+            pic: 'static/images/releases.gif'
           }, {
             title: 'Download any anime simply',
             description:
               'KawAnime allows anyone to download any anime (via torrent) as easy as it should be. ' +
               'No more looking for batch torrents.',
-            pic: '/images/downloader.gif'
+            pic: 'static/images/downloader.gif'
           }, {
             title: 'Manage your watch lists',
             description:
             'Anyone can manage local watch lists easily in KawAnime. Soon enough, ' +
             'it will even be possible to link those to your MyAnimeList account',
-            pic: '/images/Hestia.gif'
+            pic: 'static/images/Hestia.gif'
           }, {
             title: 'Follow the anime season',
             description:
               'KawAnime offers a feature to follow the anime seasons simply, even adding anime to your watch lists on the go is easy!',
-            pic: '/images/Hestia.gif'
+            pic: 'static/images/Hestia.gif'
           }, {
             title: 'Start watching your anime directly from KawAnime',
             description:
             'No need to open yet another software to start watching your animes. ' +
             'You can start (and even delete) your anime files from within KawAnime. It will open in your preferred app. ' +
             'This alongside a nice overview of the anime you are interested in watching!',
-            pic: '/images/local.gif'
+            pic: 'static/images/local.gif'
           }, {
             title: 'Don\'t forget what you watched',
             description:
               'KawAnime stores your watching history. Of course, you can delete entries on the go if you need to. \n ( ͡° ͜ʖ ͡°)',
-            pic: '/images/Hestia.gif'
+            pic: 'static/images/Hestia.gif'
           }
         ]
       }

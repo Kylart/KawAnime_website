@@ -19,7 +19,7 @@
   #about
   {
     padding-top: 30px;
-    height: 50vh;
+    height: 60vh;
   }
 
   .subtitle

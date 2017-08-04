@@ -12,7 +12,7 @@
           </div>
         </div>
         <div id="screenshot">
-          <img src="~static/images/screenshot.png">
+          <img src="static/images/screenshot.png">
           <h4 class="description">
             KawAnime is a software designed <strong>by</strong> otakus <strong>for</strong> the otaku community.
           </h4>
@@ -30,10 +30,11 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    background-image: url('~static/images/title_bg.jpg');
+    background-image: url('/static/images/title_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 70vh;
+    padding-bottom: 10vh;
   }
 
   .kawanime

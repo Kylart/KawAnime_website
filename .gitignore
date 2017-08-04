@@ -1,17 +1,5 @@
-# dependencies
-node_modules
-
-# logs
+.DS_Store
+node_modules/
+dist/
 npm-debug.log
-
-# Nuxt build
-.nuxt
-
-# Nuxt generate
-dist
-
-# JetBrains
 .idea
-
-# Don't like this
-package-lock.json
