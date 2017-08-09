@@ -11,22 +11,30 @@
                 <p class="desc">{{ item.description }}</p>
               </v-flex>
               <v-flex hidden-sm-and-down md6 class="pic">
-                <img :src="item.pic" class="img-large"/>
+                <lazy-component>
+                  <img :src="item.pic" class="img-large"/>
+                </lazy-component>
               </v-flex>
               <v-flex xs12 hidden-md-and-up class="pic">
-                <img :src="item.pic" class="img-small"/>
+                <lazy-component>
+                  <img :src="item.pic" class="img-small"/>
+                </lazy-component>
               </v-flex>
             </template>
             <template v-else>
               <v-flex hidden-sm-and-down md6 class="pic">
-                <img :src="item.pic" class="img-large"/>
+                <lazy-component>
+                  <img :src="item.pic" class="img-large"/>
+                </lazy-component>
               </v-flex>
               <v-flex xs12 md6 class="feature">
                 <h2 class="feature-title">{{ item.title }}</h2>
                 <p class="desc">{{ item.description }}</p>
               </v-flex>
               <v-flex xs12 hidden-md-and-up class="pic">
-                <img :src="item.pic" class="img-small"/>
+                <lazy-component>
+                  <img :src="item.pic" class="img-small"/>
+                </lazy-component>
               </v-flex>
             </template>
           </v-layout>
@@ -56,7 +64,7 @@
 
   .feature
   {
-    margin-top: 8vh;
+    margin-top: 6vh;
     text-align: center;
   }
 
@@ -151,7 +159,7 @@
           }, {
             title: 'Don\'t forget what you watched',
             description:
-              'KawAnime stores your watching history. Of course, you can delete entries on the go if you need to. \n ( ͡° ͜ʖ ͡°)',
+              'KawAnime stores your watching history. Of course, you can delete entries on the go if you need to. \n ( ͡°ʖ ͡°)',
             pic: 'static/images/Hestia.gif'
           }
         ]

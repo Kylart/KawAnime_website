@@ -2,12 +2,18 @@ import Vue from 'vue'
 import App from './App.vue'
 import Vuetify from 'vuetify'
 import VueScrollTo from 'vue-scrollto'
+import VueLazyload from 'vue-lazyload'
 import Components from 'components/_index'
 
 import { createStore } from 'store/index'
 import { createRouter } from 'router/index'
 import { sync } from 'vuex-router-sync'
 
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  attempt: 1,
+  lazyComponent: true
+})
 Vue.use(VueScrollTo, {
   offset: -48
 })

@@ -1,25 +1,15 @@
-<template>
-    <div id="title">
-      <div>
-        <div class="bg">
-          <div>
-            <h1 class="kawanime">
-              KawAnime
-            </h1>
-            <h2 class="subtitle">
-              The ultimate otaku software
-            </h2>
-          </div>
-        </div>
-        <div id="screenshot">
-          <img src="static/images/screenshot.png">
-          <h4 class="description">
-            KawAnime is a software designed <strong>by</strong> otakus <strong>for</strong> the otaku community.
-          </h4>
-          <p class="details">Also, it can be a bit risky.</p>
-        </div>
-      </div>
-    </div>
+<template lang="pug">
+  div#title
+    div
+      div.bg
+        div
+          h1.kawanime KawAnime
+          h2.subtitle The ultimate otaku software
+      div#screenshot
+        lazy-component
+          img(src="static/images/screenshot.png")
+          h4.description KawAnime is a software designed #[strong by] otakus #[strong for] the otaku community.
+          p.details Also, it can be a bit risky.
 </template>
 
 <style scoped>
@@ -42,7 +32,7 @@
     font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
     display: block;
     font-weight: 200;
-    font-size: 12vh;
+    font-size: 10vh;
     color: #35495e;
     letter-spacing: 3px;
   }
@@ -84,7 +74,7 @@
   img
   {
     height: 50%;
-    width: 90%;
+    width: 75%;
     z-index: 5;
     margin-bottom: -2%;
   }

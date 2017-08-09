@@ -1,11 +1,8 @@
-<template>
-  <section id="download">
-    <v-layout row align-center justify-space-around class="layout">
-      <v-flex xs8 md4>
-        <v-btn block large primary class="download-btn">Download for {{ currentOs }}</v-btn>
-      </v-flex>
-    </v-layout>
-  </section>
+<template lang="pug">
+  section#download
+    v-layout( row align-center justify-space-around).layout
+      v-flex(xs8 md4)
+        v-btn(block large primary).download-btn Download for {{ currentOs }}
 </template>
 
 <style scoped>

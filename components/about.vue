@@ -1,25 +1,20 @@
-<template>
-  <section id="about">
-    <h1 class="subtitle">What is KawAnime?</h1>
-    <div class="container">
-      <h5 class="text">
-        KawAnime is a desktop app with the purpose of having anyone able to easily download
-        tons of anime as much as being able to download one of the latest releases with just a click.
-      </h5>
-      <h5 class="text">
-        KawAnime offers many other features to follow the anime world. It was made by anime fans and designed for them.
-      </h5>
-      <h5 class="text try-it">Try it out, it is free!</h5>
-      <h5 class="details">I mean... It's not like I <strong>want</strong> you to download it or anything</h5>
-    </div>
-  </section>
+<template lang="pug">
+  section#about
+    h1.subtitle What is KawAnime?
+    div.container
+      h5.text
+        | KawAnime is a desktop app with the purpose of having anyone able to easily download
+        | tons of anime as much as being able to download one of the latest releases with just a click.
+      h5.text KawAnime offers many other features to follow the anime world. It was made by anime fans and designed for them.
+      h5.text.try-it Try it out, it is free!
+      h5.details I mean... It's not like I #[strong want] you to download it or anything
 </template>
 
 <style scoped>
   #about
   {
     padding-top: 30px;
-    height: 60vh;
+    min-height: 60vh;
   }
 
   .subtitle
@@ -34,7 +29,7 @@
 
   .container
   {
-    width: 70%;
+    width: 90%;
     margin: auto;
     padding-top: 10px;
     text-align: center;

@@ -9,26 +9,36 @@
         Help develop KawAnime
         <br>
         <a href="https://github.com/Kylart/KawAnime" target="_blank">
-          <img src="static/images/programming.gif" class="gif"/>
+          <lazy-component>
+            <img src="static/images/programming.gif" class="gif"/>
+          </lazy-component>
         </a>
       </v-flex>
       <v-flex xs12 md6 class="description opt">
         Report bugs or propose features
         <br>
         <a href="https://github.com/Kylart/KawAnime/issues" target="_blank">
-          <img src="static/images/idea.gif" class="gif"/>
+          <lazy-component>
+            <img src="static/images/idea.gif" class="gif"/>
+          </lazy-component>
         </a>
       </v-flex>
       <v-flex xs12 class="description opt">
         Donate
         <v-layout row wrap>
           <v-flex xs12 md7>
-            <img src="static/images/Hestia.gif" class="gif"/>
+            <lazy-component>
+              <img src="static/images/Hestia.gif" class="gif"/>
+            </lazy-component>
           </v-flex>
           <v-flex xs12 md2>
-            <img src="static/images/patreon.png" class="pp-links"/>
+            <lazy-component>
+              <img src="static/images/patreon.png" class="pp-links"/>
+            </lazy-component>
             <br>
-            <img src="static/images/paypal.png" class="pp-links"/>
+            <lazy-component>
+              <img src="static/images/paypal.png" class="pp-links"/>
+            </lazy-component>
           </v-flex>
         </v-layout>
       </v-flex>
