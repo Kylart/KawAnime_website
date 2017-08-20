@@ -7,7 +7,7 @@
           h2.subtitle The ultimate otaku software
       div#screenshot
         lazy-component
-          img(src="static/images/screenshot.png")
+          img(src="http://i.imgur.com/TQAyUlD.png")
           h4.description KawAnime is a software designed #[strong by] otakus #[strong for] the otaku community.
           p.details Also, it can be a bit risky.
 </template>
@@ -20,7 +20,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    background-image: url('/static/images/title_bg.jpg');
+    background-image: url('http://i.imgur.com/Dka7hIW.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 70vh;

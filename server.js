@@ -66,7 +66,7 @@ app.use('/public', serve('./public', true))
 app.use('/static/robots.txt', serve('./robots.txt'))
 
 app.get('/sitemap.xml', (req, res) => {
-  res.setHeader("Content-Type", "text/xml")
+  res.setHeader('Content-Type', 'text/xml')
   res.sendFile(resolve('./static/sitemap.xml'))
 })
 
@@ -91,8 +91,8 @@ const isCacheable = req => useMicroCache
 function render (req, res) {
   const s = Date.now()
 
-  res.setHeader("Content-Type", "text/html")
-  res.setHeader("Server", serverInfo)
+  res.setHeader('Content-Type', 'text/html')
+  res.setHeader('Server', serverInfo)
 
   const handleError = err => {
     if (err && err.code === 404) {

@@ -10,7 +10,7 @@
         <br>
         <a href="https://github.com/Kylart/KawAnime" target="_blank">
           <lazy-component>
-            <img src="static/images/programming.gif" class="gif"/>
+            <img src="https://media.giphy.com/media/3owvKqQC5JvrZ152ik/giphy.gif" class="gif"/>
           </lazy-component>
         </a>
       </v-flex>
@@ -19,7 +19,7 @@
         <br>
         <a href="https://github.com/Kylart/KawAnime/issues" target="_blank">
           <lazy-component>
-            <img src="static/images/idea.gif" class="gif"/>
+            <img src="https://media.giphy.com/media/l3fzUIUsIzBzab79e/giphy.gif" class="gif"/>
           </lazy-component>
         </a>
       </v-flex>
@@ -28,7 +28,7 @@
         <v-layout row wrap>
           <v-flex xs12 md7>
             <lazy-component>
-              <img src="static/images/Hestia.gif" class="gif"/>
+              <img src="https://media.giphy.com/media/l3fzLKYzWnoQHo4Fi/giphy.gif" class="gif"/>
             </lazy-component>
           </v-flex>
           <v-flex xs12 md2>

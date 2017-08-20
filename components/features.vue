@@ -131,36 +131,39 @@
             description:
               'KawAnime lets you know the latest releases according to your preferred fansubs, ' +
               'and lets you download them easily with just a click.',
-            pic: 'static/images/releases.gif'
+            pic: 'https://media.giphy.com/media/l1Jp2Im8XHxHBr04M/giphy.gif'
           }, {
-            title: 'Download any anime simply',
+            title: 'Download any anime, simply',
             description:
               'KawAnime allows anyone to download any anime (via torrent) as easy as it should be. ' +
               'No more looking for batch torrents.',
-            pic: 'static/images/downloader.gif'
+            pic: 'https://media.giphy.com/media/xUNemQ3LrJcYfkHZ4c/giphy.gif'
           }, {
             title: 'Manage your watch lists',
             description:
-            'Anyone can manage local watch lists easily in KawAnime. Soon enough, ' +
-            'it will even be possible to link those to your MyAnimeList account',
-            pic: 'static/images/Hestia.gif'
+            'Anyone can manage local watch lists easily in KawAnime.',
+            pic: 'https://media.giphy.com/media/3ohk2wU3GqcY53IeiY/giphy.gif'
           }, {
             title: 'Follow the anime season',
             description:
               'KawAnime offers a feature to follow the anime seasons simply, even adding anime to your watch lists on the go is easy!',
-            pic: 'static/images/Hestia.gif'
+            pic: 'https://media.giphy.com/media/3o7Osxlsg4lVLevBDO/giphy.gif'
+          }, {
+            title: 'Follow the anime world actuality',
+            description: 'KawAnime lets you aware of the anime related news.',
+            pic: 'https://media.giphy.com/media/3owvKfATSJ2XLqJ8ME/giphy.gif'
           }, {
             title: 'Start watching your anime directly from KawAnime',
             description:
             'No need to open yet another software to start watching your animes. ' +
             'You can start (and even delete) your anime files from within KawAnime. It will open in your preferred app. ' +
             'This alongside a nice overview of the anime you are interested in watching!',
-            pic: 'static/images/local.gif'
+            pic: 'https://media.giphy.com/media/3owvK9bIm6rxgjREWc/giphy.gif'
           }, {
             title: 'Don\'t forget what you watched',
             description:
               'KawAnime stores your watching history. Of course, you can delete entries on the go if you need to. \n ( ͡°ʖ ͡°)',
-            pic: 'static/images/Hestia.gif'
+            pic: 'https://media.giphy.com/media/l3fzBNPK1dOGKRBqE/giphy.gif'
           }
         ]
       }
