@@ -31,9 +31,11 @@
     main(style="margin-top: 48px;")
       router-view
 
-    v-footer.grey.darken-4
+    v-footer.grey.darken-4.pr-2
+      .white--text If you want to talk to me for any reason, you can do it by clicking&nbsp;
+      a.contact-me(href='mailto:kylart.dev@gmail.com') here.
       v-spacer
-      div.white--text © 2016 - {{ (new Date()).getYear() + 1900 }} Kylart
+      .white--text © 2016 - {{ (new Date()).getYear() + 1900 }} Kylart
 </template>
 
 <script>
@@ -49,8 +51,7 @@
           {to: '#features', title: 'Features', action: 'done_all'},
           {to: '#about', title: 'About', action: 'more'},
           {to: '#download', title: 'Download', action: 'file_download'},
-          {to: '#contribute', title: 'Contribute', action: 'help'},
-          {to: '#contact', title: 'Contact', action: 'mail_outline'}
+          {to: '#contribute', title: 'Contribute', action: 'help'}
         ]
       }
     }
@@ -89,4 +90,7 @@
 
 <style lang="stylus">
   @import './stylus/main.styl'
+
+  .contact-me
+    color: white !important
 </style>

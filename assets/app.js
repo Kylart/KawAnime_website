@@ -30,6 +30,8 @@ export function createApp (ssrContext) {
   const store = createStore()
   const router = createRouter()
 
+  store.dispatch('init')
+
   // sync the router with the vuex store.
   // this registers `store.state.route`
   sync(store, router)
