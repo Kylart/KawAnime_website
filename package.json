@@ -8,7 +8,8 @@
     "start": "NODE_ENV=production node server",
     "build": "rimraf dist && npm run build:client && npm run build:server",
     "build:client": "NODE_ENV=production webpack --config build/webpack.client.config.js --progress --hide-modules",
-    "build:server": "NODE_ENV=production webpack --config build/webpack.server.config.js --progress --hide-modules"
+    "build:server": "NODE_ENV=production webpack --config build/webpack.server.config.js --progress --hide-modules",
+    "deploy": "NODE_ENV=production forever start server"
   },
   "engines": {
     "node": ">=7.0",
@@ -45,6 +46,7 @@
     "css-loader": "^0.28.0",
     "eventsource-polyfill": "^0.9.6",
     "file-loader": "^0.11.1",
+    "forever": "^0.15.3",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "highlight.js": "^9.8.0",
     "html-webpack-plugin": "^2.24.1",
