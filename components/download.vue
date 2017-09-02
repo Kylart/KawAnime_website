@@ -31,7 +31,7 @@
     data () {
       return {
         currentOs: '',
-        link: ''
+        osIndex: 0
       }
     },
     computed: {
@@ -53,6 +53,9 @@
           {short: 'X11', name: 'UNIX', link: `${this.baseUri}-${this.shortVersion}-x86_64.AppImage`},
           {short: 'Linux', name: 'Linux', link: `${this.baseUri}_${this.shortVersion}_amd64.deb`}
         ]
+      },
+      link () {
+        return this.osList[this.osIndex].link
       }
     },
     methods: {
@@ -62,7 +65,7 @@
         for (let i = 0; i < 4; ++i) {
           const elem = this.osList[i]
           if (os.indexOf(elem.short) !== -1) {
-            this.link = elem.link
+            this.osIndex = i
             return elem.name
           }
         }
