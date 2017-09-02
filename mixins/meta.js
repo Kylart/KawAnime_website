@@ -6,7 +6,7 @@ export default {
       this.setMeta()
     }
   },
-  
+
   created () {
     if (process.env.VUE_ENV === 'client') return
 

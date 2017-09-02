@@ -7,7 +7,8 @@ const compression = require('compression')
 const resolve = file => path.resolve(__dirname, file)
 const { createBundleRenderer } = require('vue-server-renderer')
 const redirects = require('./router/301.json')
-
+const https = require('https')
+const http = require('http')
 const isProd = process.env.NODE_ENV === 'production'
 const useMicroCache = process.env.MICRO_CACHE !== 'false'
 const serverInfo =
@@ -15,6 +16,11 @@ const serverInfo =
   `vue-server-renderer/${require('vue-server-renderer/package.json').version}`
 
 const app = express()
+
+const options = {
+  key: fs.readFileSync(process.env.SSL_KEY_PATH),
+  cert: fs.readFileSync(process.env.SSL_CERT_PATH)
+}
 
 const template = fs.readFileSync(resolve('./assets/index.template.html'), 'utf-8')
 
@@ -139,6 +145,10 @@ app.get('*', isProd ? render : (req, res) => {
 })
 
 const port = process.env.PORT || 3000
-app.listen(port, '0.0.0.0', () => {
-  console.log(`> server started at localhost:${port}`)
-})
+var httpsServer = https.createServer(options, app)
+httpsServer.listen(port)
+
+http.createServer((req, res) => {
+  res.writeHead(301, {'Location': 'https://kawanime.com'})
+  res.end()
+}).listen(8080)

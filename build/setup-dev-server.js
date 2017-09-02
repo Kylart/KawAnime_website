@@ -8,10 +8,10 @@ module.exports = function setupDevServer (app, cb) {
   let bundle, clientManifest
   let resolve
   let resolved = false
-  const readyPromise = new Promise(r => { resolve = r })
+  const readyPromise = new Promise(r => { resolve = r }) // eslint-disable-line promise/param-names
   const ready = (...args) => {
     if (!resolved) resolve()
-    cb(...args)
+    cb(...args) // eslint-disable-line standard/no-callback-literal
   }
 
   // modify client config to work with hot middleware
