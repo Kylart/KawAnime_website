@@ -17,9 +17,11 @@ const store = (data, req, res) => {
   const now = new Date()
   const id = data.id || null
 
-  client.hset(`usr:${id}`, 'ip', ip, redis.print)
-  client.hincrby(`usr:${id}`, 'hits', 1, redis.print)
-  client.lpush(`usr:${id}:connections`, now.getTime())
+  if (id) {
+    client.hincrby(`usr:${id}`, 'hits', 1, redis.print)
+    client.sadd(`usr:${id}:ips`, ip, redis.print)
+    client.lpush(`usr:${id}:connections`, now.getTime())
+  }
 
   res.send()
 }
