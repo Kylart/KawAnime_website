@@ -28,12 +28,7 @@ export function createRouter () {
     ]
   })
 
-    // Send a pageview to Google Analytics
   router.beforeEach((to, from, next) => {
-    if (typeof ga !== 'undefined') {
-      ga('set', 'page', to.path)  // eslint-disable-line
-      ga('send', 'pageview')  // eslint-disable-line
-    }
     next()
   })
 

@@ -69,12 +69,14 @@ app.use(compression({ threshold: 0 }))
 app.use(favicon('./static/favicon.ico'))
 app.use('/static', serve('./static', true))
 app.use('/public', serve('./public', true))
-app.use('/static/robots.txt', serve('./robots.txt'))
+app.use('/robots.txt', serve('./robots.txt'))
 
 app.get('/sitemap.xml', (req, res) => {
   res.setHeader('Content-Type', 'text/xml')
   res.sendFile(resolve('./static/sitemap.xml'))
 })
+
+require('./api')(app)
 
 // 301 redirect for changed routes
 Object.keys(redirects).forEach(k => {
@@ -145,7 +147,7 @@ app.get('*', isProd ? render : (req, res) => {
 })
 
 const port = process.env.PORT || 3000
-var httpsServer = https.createServer(options, app)
+const httpsServer = https.createServer(options, app)
 httpsServer.listen(port)
 
 http.createServer((req, res) => {
