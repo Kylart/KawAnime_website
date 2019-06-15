@@ -16,14 +16,11 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'Index',
 
   data: () => ({
     osIndex: 0,
-    downloadLink: '',
     shows: {
       title: false,
       image: false,
@@ -42,12 +39,14 @@ export default {
     },
     currentExt () {
       return this.osList[this.osIndex].extension
+    },
+    downloadLink () {
+      return this.$store.getters['getAsset'](this.currentExt)
     }
   },
 
   mounted () {
     this.getOs()
-    this.fetchDownloadLink()
     this.init()
   },
 
@@ -55,21 +54,13 @@ export default {
     init () {
       this.shows.title = true
 
-      setTimeout(() => (this.shows.image = true), 750)
+      setTimeout(() => {
+        this.shows.image = true
+        this.$store.commit('hasLoaded')
+      }, 750)
     },
     download () {
       window.open(this.downloadLink, '_blank')
-    },
-    async fetchDownloadLink () {
-      try {
-        const { data: { assets } } = await axios.get('https://api.github.com/repos/Kylart/KawAnime/releases/latest')
-
-        for (const { name, browser_download_url: url } of assets) {
-          if (name.split('.').slice(-1)[0] === this.currentExt) this.downloadLink = url
-        }
-      } catch (e) {
-        throw e
-      }
     },
     getOs () {
       const os = navigator.appVersion
