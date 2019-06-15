@@ -1,7 +1,3 @@
-.one-page-container {
-  @apply h-screen w-screen pt-12
-}
-
 .flex-centered {
   @apply flex justify-center items-center
 }

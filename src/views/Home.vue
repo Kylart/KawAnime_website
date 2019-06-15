@@ -99,11 +99,14 @@ export default {
 
   .one-page-container {
     background-image: url('../assets/images/index-bg.jpg');
-    @apply h-full bg-no-repeat bg-cover pr-32 flex items-center justify-end
+    /* Toolbar */
+    height: calc(100% - 48px);
+    @apply w-full bg-no-repeat bg-cover pr-32 flex items-center justify-end overflow-hidden
   }
 
   .card {
-    @apply h-full w-3/5 pt-8 pb-2 ml-16 flex flex-col justify-between items-center
+    height: 100%;
+    @apply w-3/5 pt-4 pb-2 ml-16 flex flex-col justify-between items-center
   }
 
   .title {
@@ -125,7 +128,8 @@ export default {
   }
 
   .download-container {
-    @apply p-4 w-1/3 h-20 text-center
+    min-width: 15rem;
+    @apply p-4 w-1/4 h-20 text-center
   }
 
   .download-btn {
