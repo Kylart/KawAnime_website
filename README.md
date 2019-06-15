@@ -1,21 +1,29 @@
-# KawAnime's website
+# KawAnime
 
-> [KawAnime](https://github.com/Kylart/KawAnime)'s official website. https://kawanime.com
-
-## Build Setup
-
-``` bash
-git clone https://github.com/Kylart/KawAnime_website
-
-cd KawAnime_website
-
-npm install
-
-# For dev mode
-npm run dev
-
-# OR
-
-# For production mode
-npm run build && npm run start  # Or npm run bstart
+## Project setup
 ```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
