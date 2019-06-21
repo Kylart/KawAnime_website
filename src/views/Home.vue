@@ -16,14 +16,11 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'Index',
 
   data: () => ({
     osIndex: 0,
-    downloadLink: '',
     shows: {
       title: false,
       image: false,
@@ -42,12 +39,14 @@ export default {
     },
     currentExt () {
       return this.osList[this.osIndex].extension
+    },
+    downloadLink () {
+      return this.$store.getters['getAsset'](this.currentExt)
     }
   },
 
   mounted () {
     this.getOs()
-    this.fetchDownloadLink()
     this.init()
   },
 
@@ -55,21 +54,13 @@ export default {
     init () {
       this.shows.title = true
 
-      setTimeout(() => (this.shows.image = true), 750)
+      setTimeout(() => {
+        this.shows.image = true
+        this.$store.commit('hasLoaded')
+      }, 750)
     },
     download () {
       window.open(this.downloadLink, '_blank')
-    },
-    async fetchDownloadLink () {
-      try {
-        const { data: { assets } } = await axios.get('https://api.github.com/repos/Kylart/KawAnime/releases/latest')
-
-        for (const { name, browser_download_url: url } of assets) {
-          if (name.split('.').slice(-1)[0] === this.currentExt) this.downloadLink = url
-        }
-      } catch (e) {
-        throw e
-      }
     },
     getOs () {
       const os = navigator.appVersion
@@ -99,11 +90,14 @@ export default {
 
   .one-page-container {
     background-image: url('../assets/images/index-bg.jpg');
-    @apply h-full bg-no-repeat bg-cover pr-32 flex items-center justify-end
+    /* Toolbar */
+    height: calc(100% - 48px);
+    @apply w-full bg-no-repeat bg-cover pr-32 flex items-center justify-end overflow-hidden
   }
 
   .card {
-    @apply h-full w-3/5 pt-8 pb-2 ml-16 flex flex-col justify-between items-center
+    height: 100%;
+    @apply w-3/5 pt-4 pb-2 ml-16 flex flex-col justify-between items-center
   }
 
   .title {
@@ -125,7 +119,8 @@ export default {
   }
 
   .download-container {
-    @apply p-4 w-1/3 h-20 text-center
+    min-width: 15rem;
+    @apply p-4 w-1/4 h-20 text-center
   }
 
   .download-btn {

@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
   .toolbar-container {
-    @apply fixed top-0 h-12 w-screen bg-indigo-800 px-8 flex justify-end shadow-lg
+    @apply sticky top-0 h-12 w-full bg-indigo-800 px-8 flex justify-end shadow-lg
   }
 
   .toolbar-right {
