@@ -22,7 +22,7 @@
     v-content
       router-view
 
-    v-footer.pr-2.pl-2(dark, app)
+    v-footer.pr-2.pl-2(dark, app, absolute)
       v-spacer
       span © 2016 - {{ (new Date()).getYear() + 1900 }} Kylart
 </template>
