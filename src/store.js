@@ -6,14 +6,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    hasLoaded: false,
     releasesUrl: 'https://api.github.com/repos/Kylart/KawAnime/releases/latest',
     availableAssets: []
   },
   mutations: {
-    hasLoaded (state) {
-      state.hasLoaded = true
-    },
     setAssets (state, assets) {
       state.availableAssets = assets
     }

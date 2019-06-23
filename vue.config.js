@@ -1,10 +1,7 @@
 module.exports = {
   lintOnSave: false,
 
-  pluginOptions: {
-    express: {
-      shouldServeApp: true,
-      serverDir: './server'
-    }
+  configureWebpack: {
+    devtool: 'source-map'
   }
 }
