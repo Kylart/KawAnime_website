@@ -1,14 +1,23 @@
 <template lang="pug">
   v-app
-    v-toolbar.hidden-sm-and-down(app)
+    v-toolbar(app)
       v-spacer
-      v-toolbar-items
+      v-toolbar-items.hidden-sm-and-down
         v-btn(
           v-for='anchor in anchors',
           :key='anchor.text',
           flat,
           @click='goTo(anchor.to)'
         ) {{ anchor.text }}
+
+      v-toolbar-items.hidden-md-and-up
+        v-btn(
+          v-for='anchor in anchors',
+          :key='anchor.text',
+          flat, icon
+          @click='goTo(anchor.to)'
+        )
+          v-icon {{ anchor.icon }}
 
     v-content
       router-view
@@ -31,15 +40,18 @@ export default {
     anchors: [
       {
         text: 'Home',
-        to: '#header'
+        to: '#header',
+        icon: 'home'
       },
       {
         text: 'Download',
-        to: '#features'
+        to: '#features',
+        icon: 'file_download'
       },
       {
         text: 'Help',
-        to: '#support'
+        to: '#support',
+        icon: 'help'
       }
     ]
   }),
