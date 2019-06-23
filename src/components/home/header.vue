@@ -1,13 +1,14 @@
 <template lang="pug">
   .main-container
     .bg-container
-      transition(
-        appear,
-        appear-active-class='fade-top-enter-active'
-      )
-        .title-container
-          .name(:style='titleSize.name') KawAnime
-          .slogan(:style='titleSize.slogan') The ultimate otaku software
+      v-layout(justify-center, pt-4, pb-4)
+        transition(
+          appear,
+          appear-active-class='fade-top-enter-active'
+        )
+          .title-container
+            .name(:style='titleSize.name') KawAnime
+            .slogan(:style='titleSize.slogan') The ultimate otaku software
 
     transition(
       appear,
@@ -15,34 +16,14 @@
     )
       .screenshot-container
         img.screenshot(src='https://i.imgur.com/v3mKIbc.jpg')
-        .sentence-container
-          .cool-sentence(:style='sentenceSize.sentence') A tool to properly manage your anime life.
-          .a-bit-risky(:style='sentenceSize.risky') though it can be a bit risky..
-
-    v-layout(justify-center)
-      v-btn(:href='downloadLink')
-        span Download for {{ currentOs.name }}
 </template>
 
 <script>
 export default {
   name: 'Header',
 
-  mounted () {
-    const os = navigator.appVersion
-
-    for (let i = 0; i < 4; ++i) {
-      const elem = this.osList[i]
-      if (os.indexOf(elem.short) !== -1) {
-        this.osIndex = i
-        return elem.name
-      }
-    }
-  },
-
   data () {
     return {
-      osIndex: 0,
       titleSizes: {
         xs: {
           name: '2rem',
@@ -76,26 +57,6 @@ export default {
         name: { fontSize: size.name },
         slogan: { fontSize: size.slogan }
       }
-    },
-    sentenceSize () {
-      return {
-        sentence: { fontSize: `calc(${this.titleSize.name.fontSize} - 1rem)` },
-        risky: { fontSize: `calc(${this.titleSize.slogan.fontSize} - 0.30rem)` }
-      }
-    },
-    osList () {
-      return [
-        { short: 'Win', name: 'Windows', extension: 'exe' },
-        { short: 'Mac', name: 'MacOS', extension: 'dmg' },
-        { short: 'X11', name: 'UNIX', extension: 'AppImage' },
-        { short: 'Linux', name: 'Linux', extension: 'deb' }
-      ]
-    },
-    currentOs () {
-      return this.osList[this.osIndex]
-    },
-    downloadLink () {
-      return this.$store.getters['getAsset'](this.currentOs.extension).url
     }
   }
 }
@@ -128,21 +89,18 @@ export default {
     width 100%
 
   .bg-container
-    // Container things
-    min-height 85vh
+    height 600px
     width 100%
-    padding-top 10vh
+    padding-top 60px
 
-    // Flex
+    background-image url('https://i.imgur.com/Dka7hIW.jpg')
+    background-repeat no-repeat
+    background-position top left
+    background-size cover
+
     display flex
     justify-content center
     align-items flex-start
-
-    // Background things
-    background-image url('https://i.imgur.com/Dka7hIW.jpg')
-    background-size cover
-    background-position top left
-    background-repeat no-repeat
 
   .title-container
     // global styling
@@ -169,21 +127,9 @@ export default {
   .screenshot-container
     width 100%
     text-align center
+    margin-top -35vh
 
     .screenshot
       width 80%
-      margin-top -40vh
-
-  .sentence-container
-    padding 1vh 10vw 0
-
-    letter-spacing 0.025em
-
-    .cool-sentence
-      text-align center
-
-    .a-bit-risky
-      padding-top 20px
-      text-align right
-      font-style italic
+      margin-top 32px
 </style>

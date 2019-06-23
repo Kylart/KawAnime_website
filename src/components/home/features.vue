@@ -1,5 +1,13 @@
 <template lang="pug">
   .main-container
+    .sentence-container
+      .cool-sentence(:style='sentenceSize.sentence') A tool to properly manage your anime life.
+      .a-bit-risky(:style='sentenceSize.risky') though it can be a bit risky..
+
+    v-layout(justify-center, mb-3)
+      v-btn(:href='downloadLink', large, color='accent')
+        span Download for {{ currentOs.name }}
+
     v-carousel(dark)
       v-carousel-item(
         v-for='(item, index) in items',
@@ -7,9 +15,9 @@
       )
         v-container.elem-container(fluid, fill-height, pr-4, pl-4)
           v-layout(row, wrap, :reverse='index % 2 === 0')
-            v-flex.image-container(xs6, sm7, md8, lg9)
+            v-flex.image-container(xs6, sm7, lg8)
               v-img(:src='item.url', :lazy-src='item.url', height='100%', contain)
-            v-flex.text-container(xs6, sm5, md4, lg3)
+            v-flex.text-container(xs6, sm5, lg4)
               .text {{ item.text }}
 </template>
 
@@ -17,7 +25,20 @@
 export default {
   name: 'Features',
 
+  mounted () {
+    const os = navigator.appVersion
+
+    for (let i = 0; i < 4; ++i) {
+      const elem = this.osList[i]
+      if (os.indexOf(elem.short) !== -1) {
+        this.osIndex = i
+        return elem.name
+      }
+    }
+  },
+
   data: () => ({
+    osIndex: 0,
     items: [
       {
         url: 'https://i.imgur.com/v3mKIbc.jpg',
@@ -50,10 +71,40 @@ export default {
         url: 'https://i.imgur.com/gGQRAGu.png',
         text: 'Auto track your progress, no need to do the manual work anymore!'
       }
-    ]
+    ],
+    sentenceSizes: {
+      xs: {
+        sentence: '1rem',
+        risky: '0.30rem'
+      },
+      sm: {
+        sentence: '1.5rem',
+        risky: '0.70rem'
+      },
+      md: {
+        sentence: '2rem',
+        risky: '0.95rem'
+      },
+      lg: {
+        sentence: '2.5rem',
+        risky: '1.2rem'
+      },
+      xl: {
+        sentence: '3rem',
+        risky: '1.45rem'
+      }
+    }
   }),
 
   computed: {
+    sentenceSize () {
+      const size = this.sentenceSizes[this.$vuetify.breakpoint.name.slice(0, 2).toLowerCase()]
+
+      return {
+        sentence: { fontSize: size.sentence },
+        risky: { fontSize: size.risky }
+      }
+    },
     fontSize () {
       const viewport = this.$vuetify.breakpoint.name.slice(0, 2).toLowerCase()
       return {
@@ -65,6 +116,20 @@ export default {
           xl: '28px'
         }[viewport]
       }
+    },
+    osList () {
+      return [
+        { short: 'Win', name: 'Windows', extension: 'exe' },
+        { short: 'Mac', name: 'MacOS', extension: 'dmg' },
+        { short: 'X11', name: 'UNIX', extension: 'AppImage' },
+        { short: 'Linux', name: 'Linux', extension: 'deb' }
+      ]
+    },
+    currentOs () {
+      return this.osList[this.osIndex]
+    },
+    downloadLink () {
+      return this.$store.getters['getAsset'](this.currentOs.extension).url
     }
   }
 }
@@ -72,7 +137,20 @@ export default {
 
 <style lang="stylus" scoped>
   .main-container
-    padding 5vh 0
+    padding 12px 0
+
+  .sentence-container
+    padding 1vh 10vw 2vh
+
+    letter-spacing 0.025em
+
+    .cool-sentence
+      text-align center
+
+    .a-bit-risky
+      padding-top 20px
+      text-align right
+      font-style italic
 
   .elem-container
     background-color rgba(30, 30, 30, 0.9)
