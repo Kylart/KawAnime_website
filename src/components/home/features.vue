@@ -8,16 +8,16 @@
       v-btn(:href='downloadLink', large, color='accent')
         span Download for {{ currentOs.name }}
 
-    v-carousel(dark)
+    v-carousel(dark, :cycle='false')
       v-carousel-item(
         v-for='(item, index) in items',
         :key='index'
       )
-        v-container.elem-container(fluid, fill-height, pr-4, pl-4)
+        v-container.elem-container(fluid, fill-height, pa-4)
           v-layout(row, wrap, :reverse='index % 2 === 0')
-            v-flex.image-container(xs6, sm7, lg8)
+            v-flex.image-container(xs12, md7, lg8)
               v-img(:src='item.url', :lazy-src='item.url', height='100%', contain)
-            v-flex.text-container(xs6, sm5, lg4)
+            v-flex.text-container(xs12, md5, lg4)
               .text {{ item.text }}
 </template>
 
@@ -155,11 +155,11 @@ export default {
   .elem-container
     background-color rgba(30, 30, 30, 0.9)
     color white
+    padding-bottom 60px !important // Controls
 
   .text-container, .image-container
-    height 100%
-    width 100%
-    padding 28px
+    max-height 100%
+    padding 0 28px
 
     display flex
     justify-content center
