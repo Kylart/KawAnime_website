@@ -1,5 +1,5 @@
 <template lang="pug">
-  .main-container
+  #features.main-container
     .sentence-container
       .cool-sentence(:style='sentenceSize.sentence') A tool to properly manage your anime life.
       .a-bit-risky(:style='sentenceSize.risky') though it can be a bit risky..

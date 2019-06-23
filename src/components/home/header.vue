@@ -1,5 +1,5 @@
 <template lang="pug">
-  .main-container
+  #header.main-container
     .bg-container
       v-layout(justify-center, pt-4, pb-4)
         transition(

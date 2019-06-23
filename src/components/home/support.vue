@@ -1,5 +1,5 @@
 <template lang="pug">
-  .main-container
+  #support.main-container
     .title-container How to contribute ?
 
     v-container(grid-list-lg, fluid)
@@ -7,7 +7,7 @@
         v-flex(
           v-for='item in supportItems',
           :key='item.link',
-          xs12, md4, lg2
+          xs12, md4, xl2
         )
           v-card(dark).elem
             v-card-title.text-uppercase.elem-title
@@ -93,5 +93,5 @@ export default {
 
       font-weight bold
       letter-spacing 0.25em
-      white-space pre-line
+      white-space pre
 </style>
