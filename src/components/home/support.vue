@@ -22,10 +22,10 @@
             v-card-actions
               v-spacer
               template(v-if='item.integratedUrl')
-                a(:href='item.link')
+                a(:href='item.link', target='_blank')
                   img(:src='item.integratedUrl', width='150px')
               template(v-else)
-                v-btn(:href='item.link')
+                v-btn(:href='item.link', target='_blank')
                   v-icon open_in_new
                   span.pl-2 {{ item.buttonText }}
               v-spacer
